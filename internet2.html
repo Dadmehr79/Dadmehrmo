@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        nav {
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            height: 64px;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        nav>.menu1 {
+            display: flex;
+            align-items: center;
+            height: 64px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav>.menu1>li>a {
+            list-style-type: none;
+            text-decoration: none;
+            color: gray;
+            position: relative;
+            transition: all;
+        }
+
+        nav>.menu1>li>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 0;
+            height: 2px;
+            background-color: gray;
+            transition: all;
+        }
+
+        nav>.menu1>li>a:hover::before {
+            width: 100%;
+        }
+
+        nav>.menu2 {
+            display: flex;
+            align-items: center;
+            height: 64px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            /* margin-right: 500px; */
+        }
+
+        nav>.menu2>li>a {
+            list-style-type: none;
+            text-decoration: none;
+            color: gray;
+            position: relative;
+            transition: all;
+
+        }
+
+        nav>.menu3 {
+            display: flex;
+            align-items: center;
+            height: 64px;
+        }
+
+        #btn1 {
+            border-radius: 10px;
+            background-color: white;
+            width: px;
+            height: 40px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 35px;
+            color: gray;
+
+        }
+        .line{
+            padding-bottom: 1rem !important;
+            border-bottom: 1px solid gray !important;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .nav2 {
+            max-width: 1200px;
+            height: 64px;
+            /* background-color: brown; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav2>.menu4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+            width: 1200px;
+            height: 64px;
+            margin: 0;
+            padding: 0;
+            margin-left: 15px;
+        }
+
+        .nav2>.menu4>li>a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: gray;
+            position: relative;
+            transition: all;
+        }
+
+        .nav2>.menu4>li>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 0;
+            height: 2px;
+            background-color: gray;
+            transition: all;
+        }
+
+        .nav2>.menu4>li>a:hover::before {
+            width: 100%;
+        }
+
+        .post {
+            display: flex;
+            flex-direction: column;
+            background-color: #333;
+            width: 100%;
+            /* max-width: 410px; */
+            height: 100vh;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-family: inherit;
+        }
+
+        .post>h1 {
+            color: white;
+        }
+
+        .post>.textpost {
+            font-weight: 300px;
+            max-width: 650px;
+            color: white;
+        }
+
+        #btn1 {
+            /* background-color: aqua; */
+            border-radius: 10px;
+            font-weight: 700px;
+            width: 200px;
+            height: 70px;
+            box-sizing: border-box;
+            font-size: x-large;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            max-width: 100%;
+            height: 450px;
+            background-color: #333;
+            /* margin-top: 500px; */
+        }
+
+
+        .infooter {
+            display: flex;
+            flex-direction: row;
+            width: 1200px;
+            height: 400px;
+            /* background-color: red; */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .infooter>.logobox {
+            width: 30%;
+            height: 400px;
+            background-color: #333;
+        }
+
+        .logobox>img {
+            margin-top: 70px;
+        }
+
+        .logobox>a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .logobox>p {
+            color: gray;
+            margin-top: 170px;
+        }
+
+        .infooter>.linebox {
+            width: 20%;
+            height: 400px;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .linebox>h1 {
+            margin-top: 70px;
+            color: white;
+        }
+
+        .linebox>a {
+            margin-top: 13px;
+            text-decoration: none;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu1">
+            <li><a href="#">subscribe</a></li>
+        </ul>
+        <ul class="menu2">
+            <li><a href="#">
+                    <h1>Large</h1>
+                </a></li>
+        </ul>
+        <div class="menu3">
+            <div class="icon">
+                <i class='bx bx-search-alt-2 bx-md'></i>
+            </div>
+            <input type="button" id="btn1" value="Sign Up">
+
+        </div>
+
+
+    </nav>
+    <div class="line"></div>
+    <div class="nav2">
+        <ul class="menu4">
+            <li><a href="#">World</a></li>
+            <li><a href="#">U.S.</a></li>
+            <li><a href="#">Tchonology</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Busnessie</a></li>
+            <li><a href="#">polotics</a></li>
+            <li><a href="#">Oponian</a></li>
+            <li><a href="#">Scince</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Style</a></li>
+            <li><a href="#">Travel</a></li>
+        </ul>
+    </div>
+    <div class="post">
+        <h1>مهندسی اینترنت</h1>
+        <div class="textpost">
+            <h2>دادمهر مرادی حقگو و علی حق شناس قاضی محله<br>استاد:دکتر فلاح راد<br>پاییز 1401</h2>
+        </div>
+        <input type="button" id="btn1" value="Learn More">
+    </div>
+    <footer>
+        <div class="infooter">
+            <div class="logobox"><img src="assets/img/logo.png.webp">
+                <a href="mailto:contact@youremail.com"><br><br><br>contact@youremail.com</a>
+                <br>
+                <br>
+                <a href="#">+43 5278 2883 884</a>
+                <br>
+                <br>
+                <a href="#">www.yoursitename.com</a>
+                <!-- <p>Copyright ©2022 All right sreserved</p> -->
+            </div>
+            <div class="linebox">
+                <h1>Politics</h1>
+                <a href="#">business</a>
+                <a href="#">markets</a>
+                <a href="#">tech</a>
+                <a href="#">luxury</a>
+            </div>
+            <div class="linebox">
+                <h1>Featured</h1>
+                <a href="#">football</a>
+                <a href="#">Golf</a>
+                <a href="#">Tennis</a>
+                <a href="#">Motorsport</a>
+                <a href="#">Horsearching</a>
+                <a href="#">Equarestan</a>
+                <a href="#">Sailling</a>
+                <a href="#">Skiing</a>
+            </div>
+            <div class="linebox">
+                <h1>FAQ</h1>
+                <a href="#">football</a>
+                <a href="#">Golf</a>
+                <a href="#">Tennis</a>
+                <a href="#">Motorsport</a>
+                <a href="#">Horsearching</a>
+                <a href="#">Equarestan</a>
+                <a href="#">Sailling</a>
+                <a href="#">partner Hotels</a>
+            </div>
+            <div class="linebox">
+                <h1>+More</h1>
+                <a href="#">football</a>
+                <a href="#">Golf</a>
+                <a href="#">Tennis</a>
+                <a href="#">Motorsport</a>
+                <a href="#">Horsearching</a>
+                <a href="#">Equarestan</a>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
