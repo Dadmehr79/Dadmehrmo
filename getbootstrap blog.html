@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+    <style>
+        nav {
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: row;
+            max-width: 1200px;
+            height: 64px;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        nav>.menu1 {
+            display: flex;
+            align-items: center;
+            height: 64px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        nav>.menu1>li>a {
+            list-style-type: none;
+            text-decoration: none;
+            color: gray;
+            position: relative;
+            transition: all;
+        }
+
+        nav>.menu1>li>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 0;
+            height: 2px;
+            background-color: gray;
+            transition: all;
+        }
+
+        nav>.menu1>li>a:hover::before {
+            width: 100%;
+        }
+
+        nav>.menu2 {
+            display: flex;
+            align-items: center;
+            height: 64px;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            /* margin-right: 500px; */
+        }
+
+        nav>.menu2>li>a {
+            list-style-type: none;
+            text-decoration: none;
+            color: gray;
+            position: relative;
+            transition: all;
+
+        }
+
+        nav>.menu3 {
+            display: flex;
+            align-items: center;
+            height: 64px;
+        }
+
+        #btn1 {
+            border-radius: 10px;
+            background-color: white;
+            width: px;
+            height: 40px;
+        }
+
+        .icon {
+            width: 40px;
+            height: 35px;
+            color: gray;
+
+        }
+        .line{
+            padding-bottom: 1rem !important;
+            border-bottom: 1px solid gray !important;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .nav2 {
+            max-width: 1200px;
+            height: 64px;
+            /* background-color: brown; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .nav2>.menu4 {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style-type: none;
+            width: 1200px;
+            height: 64px;
+            margin: 0;
+            padding: 0;
+            margin-left: 15px;
+        }
+
+        .nav2>.menu4>li>a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: gray;
+            position: relative;
+            transition: all;
+        }
+
+        .nav2>.menu4>li>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 0;
+            height: 2px;
+            background-color: gray;
+            transition: all;
+        }
+
+        .nav2>.menu4>li>a:hover::before {
+            width: 100%;
+        }
+
+        .post1 {
+            max-width: 1200px;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #343a40;
+            margin-top: 5px;
+            border-radius: 5px;
+            list-style-type: none;
+        }
+
+        .post1>h1 {
+            margin-left: auto;
+            margin-right: auto;
+            font-style: italic !important;
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+            color:white;
+        }
+
+        .post1>h3 {
+            margin-left: auto;
+            margin-right: auto;
+            color: white;
+        }
+
+        .post1>li>a {
+            margin-left: 45px;
+            text-decoration: none;
+            position: relative;
+            transition: all;
+            color: white;
+        }
+
+        .post1>li>a::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 16px;
+            width: 0;
+            height: 2px;
+            background-color: gray;
+            transition: all;
+        }
+
+        .post1>li>a:hover::before {
+            width: 100%;
+        }
+
+        .post2 {
+            max-width: 1200px;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            /* background-color: aquamarine; */
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .post2>.posts1 {
+            width: 600px;
+            height: 300px;
+            /* background-color: gray; */
+            display: flex;
+            border-radius: 5px;
+
+        }
+
+        .post2>.posts1>.image1 {
+            display: flex;
+            width: 40%;
+            height: 300px;
+            background-color: #343a40;
+            margin-left: auto;
+            border-radius: 5px;
+            /* display: block; */
+        }
+
+        .post2>.posts1>.image1>h5 {
+            align-items: center;
+            /* margin-top: 150px;
+            margin-left: 95px; */
+            color: white;
+        }
+
+        .post2>:first-child {
+            margin-right: 15px;
+        }
+
+        .post2>.posts1>p {
+            margin-left: 25px;
+            margin-top: 40px;
+        }
+        .post3{
+            max-width: 1200px;
+            height: 1630px;
+            margin-left:auto ;
+            margin-right: auto;
+            margin-top: 5px;
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .post3>.poste1{
+            width: 700px;
+            height: 1630px;
+            display: flex;
+            flex-direction: column;
+            /* background-color:crimson; */
+        }
+        
+        .post3>:first-child{
+            margin-right: 15px;
+        }
+        .post3>.poste1>p{
+            padding-bottom: 1rem !important;
+            border-bottom: 1px solid gray !important;
+        
+        }
+        .post3>.poste1>h3{
+            padding-bottom: 1rem !important;
+            border-bottom: 1px solid gray !important;
+        
+        }
+        .post3>.poste2{
+            width: 500px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            /* background-color: blueviolet; */
+        }
+        .post3>.poste2>.box{
+            width: 100%;
+            height: 130px;
+            background-color: gray;
+            /* margin-left: 15px; */
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .poste2>.box>h2{
+            font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+            font-style: italic !important;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu1">
+            <li><a href="#">subscribe</a></li>
+        </ul>
+        <ul class="menu2">
+            <li><a href="#">
+                    <h1>Large</h1>
+                </a></li>
+        </ul>
+        <div class="menu3">
+            <div class="icon">
+                <i class='bx bx-search-alt-2 bx-md'></i>
+            </div>
+            <input type="button" id="btn1" value="Sign Up">
+
+        </div>
+
+
+    </nav>
+    <div class="line"></div>
+    <div class="nav2">
+        <ul class="menu4">
+            <li><a href="#">World</a></li>
+            <li><a href="#">U.S.</a></li>
+            <li><a href="#">Tchonology</a></li>
+            <li><a href="#">Design</a></li>
+            <li><a href="#">Culture</a></li>
+            <li><a href="#">Busnessie</a></li>
+            <li><a href="#">polotics</a></li>
+            <li><a href="#">Oponian</a></li>
+            <li><a href="#">Scince</a></li>
+            <li><a href="#">Health</a></li>
+            <li><a href="#">Style</a></li>
+            <li><a href="#">Travel</a></li>
+        </ul>
+    </div>
+    <div class="post1">
+        <h1><br>
+پروژه درس مهندسی نرم افزار        </h1>
+
+        <h3>دادمهر مرادی حقگو و علی حق شناس قاضی محله<br>استاد:دکتر محسن فلاح راد
+          <br>پاییز 1401</h3>
+        <li><a href="#">Continue reading...</a></li>
+    </div>
+    <div class="post2">
+        <div class="posts1">
+            <p>دادمهر<br><br>Featured post<br>nov12<br><br>This is a wider card with supporting text below as a natural
+                lead-in to additional content.<br><br>Continue reading...</p>
+            <div class="image1">
+                <h5>thumble</h5>
+            </div>
+        </div>
+        <div class="posts1">
+            <p>World<br><br>Featured post<br>nov12<br><br>This is a wider card with supporting text below as a natural
+                lead-in to additional content.<br><br>Continue reading...</p>
+            <div class="image1">
+                <h5>thumble</h5>
+            </div>
+        </div>
+    </div>
+    
+    <div class="post3">
+        <div class="poste1">
+            <h3>From the Firehose</h3>
+            <h1>Sample blog post</h1>
+            <p>January 1, 2014 by Mark<br>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+            
+
+                    Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.<br><br>
+                
+                Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.<br><br>
+                <h2>Heading</h2>
+                
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<br><br>
+                <h2>Sub-heading</h2>
+                
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.<br><br>
+                
+                Example code block<br><br>
+                
+                Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.<br><br>
+                <h2>Sub-heading</h2>
+                
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                
+                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+                    Donec id elit non mi porta gravida at eget metus.
+                    Nulla vitae elit libero, a pharetra augue.
+                
+                Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+                
+                    Vestibulum id ligula porta felis euismod semper.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Maecenas sed diam eget risus varius blandit sit amet non magna.
+                
+                Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.
+                <h1>Another blog post</h1>
+                
+                December 23, 2013 by Jacob<br><br>
+                
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.<br><br>
+                
+                    Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.<br><br>
+                
+                Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.<br><br>
+                
+                Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.<br><br>
+                <h1>New feature</h1>
+                
+                December 14, 2013 by Chris
+                
+                Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+                <br><br>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                    
+                
+
+                </ul>
+                    
+                Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+                
+                Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.
+                </p>
+        </div>
+        <div class="poste2">
+            <div class="box">
+                <h2>about</h2>
+                <p>Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p>
+                    <h2>Archives</h2>
+                    
+                        March 2014<br>
+                        February 2014<br>
+                        January 2014<br>
+                        December 2013<br>
+                        November 2013<br>
+                        October 2013<br>
+                        September 2013<br>
+                        August 2013<br>
+                        July 2013<br>
+                        June 2013<br>
+                        May 2013<br>
+                        April 2013<br>
+                    
+                    <h2>Elsewhere</h2>
+                    
+                        GitHub<br>
+                        Twitter<br>
+                        Facebook<br>
+                    
+                    </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
