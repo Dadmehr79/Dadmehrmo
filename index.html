@@ -1,55 +1,710 @@
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/vandor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/vandor/owl.carousel/assets/owl.theme.default.min.css">
     <style>
-        p{
-            color: red;
-            background-color: yellow;
+        .topbar {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 83px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
         }
-        h1,h2{
-            color: green;
+
+        .logo {
+            margin-left: 20px;
         }
-        *{
-            color: blue;
-            text-align: center;
+
+        .menu {
+            display: flex;
+            flex-direction: row;
+            width: 40%;
+            justify-content: space-between;
+            font-size: 15px;
+            font-family: sans-serif;
+            font-weight: 500;
         }
-        .c1{
+
+        .menu>a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .search-bar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 15%;
+            margin-right: 20px;
+        }
+
+        .sec-cath {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 650px;
+        }
+
+        .sec-cath-left {
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            height: 648px;
+            background-image: url(assets/img/category-1.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+
+        .sec-tx {
+            margin-left: 80px;
+            margin-top: 250px;
+        }
+
+        .sec-tx>h1 {
+            font-family: "Cookie", cursive;
+            color: #111111;
+            margin-bottom: 5px;
+            font-size: 45px;
+            font-weight: 400;
+
+        }
+
+        .sec-tx>p {
+            width: 480px;
+            height: 48px;
+            margin-bottom: 15px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0 0 15px 0;
+        }
+
+        .sec-tx>a {
+            font-size: 14px;
+            color: #111111;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            padding: 0 0 3px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+
+
+        }
+
+        .sec-tx>a:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100%;
+            background: #ca1515;
+        }
+
+        .sec-cath-right {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 650px;
+            margin-left: 20px;
+        }
+
+        .row1 {
+            width: 100%;
+            height: 314px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .row2 {
+            width: 100%;
+            height: 314px;
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .row1>.row1-1 {
+            display: flex;
+            width: 360px;
+            height: 315px;
+            background-image: url(assets/img/category-2.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .row1>.row1-2 {
+            display: flex;
+            width: 360px;
+            height: 315px;
+            background-image: url(assets/img/category-3.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 20px;
+        }
+
+        .row2>.row2-1 {
+            display: flex;
+            width: 360px;
+            height: 315px;
+            background-image: url(assets/img/category-4.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .row2>.row2-2 {
+            display: flex;
+            width: 360px;
+            height: 315px;
+            background-image: url(assets/img/category-5.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-left: 20px;
+        }
+
+        .tx1 {
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: 35px;
+        }
+
+        .tx1>h1 {
+            font-family: "Montserrat", sans-serif;
+            color: #111111;
+            margin-bottom: 5px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .tx1>p {
+            width: 480px;
+            height: 48px;
+            margin-bottom: 0px;
+            font-family: "Montserrat", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            margin-top: -4px;
+            color: #666666;
+        }
+
+        .tx1>a {
+            font-size: 14px;
+            color: #111111;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            padding: 0 0 3px;
+            display: inline-block;
+            text-decoration: none;
+            font-family: "Montserrat", sans-serif;
+            margin-top: 0px;
+        }
+
+        .tx1>a:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 100%;
+            background: #ca1515;
+        }
+
+        .nav2 {
+            max-width: 1200px;
+            height: 100px;
+            /* background-color: aqua; */
+            display: flex;
+            flex-direction: row;
+            margin-left: auto;
+            margin-right: auto;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .nav2>h2 {
+            border-bottom: 5px solid red;
+            margin-left: 10px;
+            font-size: 24px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .nav2>ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 350px;
+            margin-right: 10px;
+        }
+
+        .nav2>ul>li {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .nav2>ul>li>a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .menu2 {
+            max-width: 1200px;
+            height: 800px;
+            /* background-color: blueviolet; */
+            display: flex;
+            flex-direction: column;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 5px;
+        }
+
+        .menu2>.inmenu {
+            width: 100%;
+            height: 300px;
+            /* background-color: aquamarine; */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .menu2>.inmenu>.post1 {
+            width: 100%;
+            height: 300px;
+            /* background-color: brown; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .post1>img {
+            width: 97%;
+            height: 300px;
+        }
+
+        .underpost {
+            width: 100%;
+            height: 100px;
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .underpost>.unpost {
+            width: 25%;
+            height: 100px;
+            /* background-color: azure; */
+        }
+
+        .underpost>.unpost>a {
+            margin-left: 80px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .underpost>.unpost>.bx {
+            margin-top: 15px;
+            margin-left: 35px;
+            /* width: 65px; */
+            /* justify-content: space-between; */
             color: orange;
+            /* display: inline-block; */
         }
-        #p1{
-            color: brown;
+
+        .underpost>.unpost>p {
+            margin-left: 120px;
         }
-        .c2{
-            color: magenta;
-            text-align: right;
+
+        .slideback {
+            max-width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            background-image: url(assets/img/banner-1.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            /* display: block; */
+            margin-top: 25px;
         }
-        .c3{
-            background-color: lightblue;
-            color: darkred;
+
+        .item {
+            width: 50%;
+            height: 250px;
+            /* background-color: green; */
+            padding: 50px;
+            text-align: center;
+            font-size: 64px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 60px;
+
+        }
+
+        .item>span {
+            color: #ca1515;
+            font-size: 18px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .item>p {
+            font-size: 40px;
+            height: 10;
+            font-family: "Cookie", cursive;
+        }
+
+        .item>a {
+            font-size: medium;
+            text-decoration: none;
+            color: black;
+            margin-top: 20px;
+            position: relative;
+            padding: 0 0 3px;
+            display: inline-block;
+            border-bottom: 5px solid red;
+            font-family: "Montserrat", sans-serif;
+
+
+        }
+
+        .post22 {
+            max-width: 100%;
+            height: 500px;
+            display: flex;
+            flex-direction: row;
+            /* background-color: aqua; */
+            margin-top: 20px;
+        }
+
+        .inpost22 {
+            width: 1200px;
+            height: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            /* background-color: blue; */
+            display: flex;
+            flex-direction: row;
+        }
+
+        .inpost22>.inpost1 {
+            width: 50%;
+            height: 500px;
+            background-image: url(assets/img/discount.jpg.webp);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-size: auto; */
+            /* background-color: brown; */
+        }
+
+        .inpost22>.inpost2 {
+            width: 50%;
+            height: 500px;
+            background-color: #f4f4f4;
+        }
+
+        .inpost2>p {
+            text-align: center;
+            margin-top: 70px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .inpost2>h1 {
+            text-align: center;
+            font-family: "Cookie", cursive;
+            color: red;
+        }
+
+        .inpost2>.p1 {
+            text-align: center;
+            font-size: large;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .inpost2>.p2{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            text-align: center;
+            font-family: "Montserrat", sans-serif;
+            margin-top: 80px;
+            /* font-size: xx-large; */
+        }
+
+        .inpost2>a {
+            border-bottom: 3px solid red;
+            text-decoration: none;
+            color: black;
+            margin-left: 255px;
+            font-family: "Montserrat", sans-serif;
+
+
         }
     </style>
 </head>
-<body>
-    <p>hello world</p>
-    <p>hi</p>
-    <h1>title1</h1>
-    <h2>title2</h2>
-    <h3>title3</h3>
-    <h4>title4</h4>
-    <p>hello</p>
-    <p class="c1">hello</p>
-    <p>hello</p>
-    <p id="p1" class="c2">par1</p>
-    <p class="c1">par2</p>
-    <p class="c2">par3</p>
-    <p class="c2 c3">par4</p>
-    <p class="c3 c2">par5</p>
-    <p>par5</p>
-   
 
-    
+<body>
+    <div class="topbar">
+        <div class="logo"><img src="assets/img/logo44.png" alt="" /></div>
+        <div class="menu">
+            <a href="#">HOME</a>
+            <a href="#">WOMEN'S</a>
+            <a href="#">MEN'S</a>
+            <a href="#">SHOP</a>
+            <a href="#">PAGES</a>
+            <a href="#">BLOG</a>
+            <a href="#">CONTACTS</a>
+        </div>
+        <div class="search-bar">
+            <p style="color: #6666">Login/Register</p>
+            <i class="bx bx-search bx-sm"></i>
+            <i class="bx bx-heart bx-sm"></i>
+            <i class="bx bx-shopping-bag bx-sm"></i>
+        </div>
+    </div>
+    <div class="sec-cath">
+        <div class="sec-cath-left">
+            <div class="sec-tx">
+                <h1>Womens fashion</h1>
+                <p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore edolore magna
+                    aliquapendisse ultrices gravida.</p>
+                <a href="#">SHOP NOW</a>
+            </div>
+
+        </div>
+        <div class="sec-cath-right">
+            <div class="row1">
+                <div class="row1-1">
+                    <div class="tx1">
+                        <h1>Mens fashion </h1>
+                        <p>358 items</p>
+                        <a href="#">SHOP NOW</a>
+                    </div>
+
+                </div>
+                <div class="row1-2">
+                    <div class="tx1">
+                        <h1>Kids fashion
+                        </h1>
+                        <p>273 items</p>
+                        <a href="#">SHOP NOW</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row2">
+                <div class="row2-1">
+                    <div class="tx1">
+                        <h1>Cosmetics
+                        </h1>
+                        <p>159 items</p>
+                        <a href="#">SHOP NOW</a>
+                    </div>
+
+                </div>
+                <div class="row2-2">
+                    <div class="tx1">
+                        <h1>Accessories
+                        </h1>
+                        <p>792 items</p>
+                        <a href="#">SHOP NOW</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="nav2">
+        <h2>New Product</h2>
+        <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Women's</a></li>
+            <li><a href="#">Men's</a></li>
+            <li><a href="#">Kid's</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Cosmetics</a></li>
+        </ul>
+    </div>
+    <div class="menu2">
+        <div class="inmenu">
+            <div class="post1">
+                <img src="assets/img/product-1.jpg.webp">
+            </div>
+            <div class="post1">
+                <img src="assets/img/product-2.jpg.webp">
+            </div>
+            <div class="post1">
+                <img src="assets/img/product-3.jpg.webp">
+            </div>
+            <div class="post1">
+                <img src="assets/img/product-4.jpg.webp">
+            </div>
+        </div>
+        <div class="underpost">
+            <div class="unpost">
+                <a href="#">Buttons tweed blazer</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 59.0</p>
+            </div>
+            <div class="unpost">
+                <a href="#">Flowy striped skirt</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 49.0</p>
+
+
+            </div>
+            <div class="unpost">
+                <a href="#">Cotton T-Shirt</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 59.0</p>
+
+
+            </div>
+            <div class="unpost">
+                <a href="#">Slim striped pocket shirt</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 59.0</p>
+
+
+            </div>
+        </div>
+        <div class="inmenu">
+            <div class="post1">
+                <img src="assets/img/product-5.jpg.webp">
+            </div>
+            <div class="post1">
+                <img src="assets/img/product-6.jpg.webp">
+            </div>
+            <div class="post1">
+                <img src="assets/img/product-7.jpg.webp">
+            </div>
+            <div class="post1">
+                <img src="assets/img/product-8.jpg.webp">
+            </div>
+        </div>
+        <div class="underpost">
+            <div class="unpost">
+                <a href="#">Fit micro corduroy shirt</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 59.0</p>
+
+
+            </div>
+            <div class="unpost">
+                <a href="#">Tropical Kimono</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 49.0</p>
+
+
+            </div>
+            <div class="unpost">
+                <a href="#">Contrasting sunglasses</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 59.0</p>
+
+
+            </div>
+            <div class="unpost">
+                <a href="#">Water resistant backpack</a>
+                <br>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i
+                    class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p>$ 49.0</p>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="slideback">
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <span>The Chloe Collection</span>
+                <p>The Project Jacket</p>
+                <a href="#">shop now</a>
+            </div>
+            <div class="item">
+                <span>The Chloe Collection</span>
+                <p>The Project Jacket</p>
+                <a href="#">shop now</a>
+            </div>
+            <div class="item">
+                <span>The Chloe Collection</span>
+                <p>The Project Jacket</p>
+                <a href="#">shop now</a>
+            </div>
+        </div>
+    </div>
+    <div class="post22">
+        <div class="inpost22">
+            <div class="inpost1"></div>
+            <div class="inpost2">
+                <p>DISCOUNT</p>
+                <h1>SUMMER 2019</h1>
+                <div class="p1">SALE 50%</div>
+                <div class="p2"><h1>30<h3>day</h3></h1><h1>04<h3>HOUR</h3></h1><h1>46<h3>MIN</h3></h1><h1>20<h3>SEC</h3></h1></div>
+                <br>
+                <br>
+                <a href="#">SHOP NOW</a>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-3.6.1.js"></script>
+    <script src="assets/vandor/owl.carousel/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel({
+                items: 1,
+                // nav: true,
+                margin: 0,
+                loop: true,
+                startPosition: 0,
+                // navText: ["pre", "next"],
+                dots: true,
+                dotsEach: true,
+                // autoPlay: true,
+                autoPlayTime: 2000,
+                smartSpeed: 1000,
+
+
+
+
+            });
+        });
+    </script>
+
+
+
+
 </body>
+
 </html>
